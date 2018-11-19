@@ -1,7 +1,14 @@
 <template>
   <div id="app">
     <header>NS Reisplanner</header>
-
+	<main>
+		<journey-preferences>
+			&nbsp;
+		</journey-preferences>
+		<station-list>
+			&nbsp;
+		</station-list>
+	</main>
 	<footer>
 		<ul>
 			<li>
@@ -19,13 +26,15 @@
 </template>
 
 <script>
-//import HelloWorld from "./components/HelloWorld.vue";
+import JourneyPreferences from "./components/JourneyPreferences.vue";
+import StationList from "./components/StationList.vue";
 
 export default {
-  name: "app"
-  /*components: {
-    HelloWorld
-  }*/
+  name: "app",
+  components: {
+    JourneyPreferences,
+    StationList
+  }
 };
 </script>
 
@@ -69,6 +78,22 @@ footer {
       color: $menu-fnkey;
     }
     padding-right: 1em;
+  }
+}
+
+div.box {
+  height: 80vh;
+  border: double 3px white;
+  display: inline-block;
+  margin: 0.9em 0.375em 0.375em;
+  vertical-align: top;
+
+  div.title {
+    margin-top: -20px;
+    background: darkblue;
+    text-align: center;
+    margin: -15px auto 0;
+    width: fit-content;
   }
 }
 </style>
